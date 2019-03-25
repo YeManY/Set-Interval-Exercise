@@ -1,0 +1,56 @@
+<!DOCTYPE html> <html><head>
+        <title>Set Interval Exercise</title>
+    <style></style></head>
+    <body>
+        <h2>What time is it?</h2>
+        <p>The Time is:</p>
+        <p id="demo"></p>
+        <hr>
+        <h2>Stopwatch</h2>
+        <button onclick="add()">Click Here</button>
+        <p id="target">0</p>
+        <hr>
+        <h2>What time is it?</h2>
+        <p>The Time is:</p>
+        <p id="time"></p>
+        <hr>
+        <button onclick="plus()">Click Here</button>
+        <p id="stop">0</p>
+    
+
+<script>
+/*__POPCODESTART__*/
+//SET INTERVAL CLOCK
+setInterval(myTimer, 1000);
+
+function myTimer() {
+  var d = new Date();
+  var t = d.toLocaleTimeString();
+  document.getElementById("demo").innerHTML = t;
+}
+
+//SET INTERVAL STOPWATCH
+function add(){
+    setInterval(build, 1000);
+}
+var i=0;
+function build(){
+    i++;
+    document.getElementById("target").innerHTML = i;
+    }
+
+//YOUR CODE GOES HERE!
+function myTimer() {
+  var d = new Date();
+  var t = d.toLocaleTimeString();
+  document.getElementById("demo").innerHTML = t;
+}
+function plus(){
+    setInterval(watch, 500);
+}
+var a = 0;
+function watch(){
+  a++;
+  document.getElementById("stop").innerHTML = a;
+ } 
+</script></body></html>
